@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :require_login, only: [ :new, :create ]
+  # before_action :require_login, only: [ :new, :create ]
 
   def index
   end
@@ -23,6 +23,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    aprams.expect(post: [ :author, :body ])
+    params.expect(post: [ :body ])
   end
 end
