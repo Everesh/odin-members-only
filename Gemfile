@@ -61,3 +61,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Devise gems for managing authentication
+gem "devise"
+gem "responders"
