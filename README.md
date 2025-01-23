@@ -1,24 +1,43 @@
-# README
+# Members-Only Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This project is a simple Rails application where users can post messages. Only signed-in users can see the author of each post, while guests can only view the messages.
 
-* Ruby version
+## Features
 
-* System dependencies
+* __User Authentication:__ Users can sign up, log in, and log out.
 
-* Configuration
+* __Posts:__ Authenticated users can create posts.
 
-* Database creation
+* __Author Visibility:__ Only logged-in users can see the author of each post.
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+1. __Clone the repository:__
+    
+    ```bash
+    git clone https://github.com/yourusername/members-only.git
+    cd members-only
+    ```
+    
+2. __Install dependencies:__
+    ```bash
+    bundle install
+    ```
+    
+3.  __Set up the database:__
+    ```bash
+    rails db:migrate
+    ```
 
-* Services (job queues, cache servers, search engines, etc.)
+4.  __Start the server:__
+    ```bash
+    rails server
+    ```
 
-* Deployment instructions
+5.  __Visit the app:__
+    
+    Open your browser and go to `http://localhost:3000`.
 
-* ...
+
