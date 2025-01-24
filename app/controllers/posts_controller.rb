@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  # before_action :require_login, only: [ :new, :create ]
+  before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
   end
@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.author = current_user.username
     if @post.save
       redirect_to posts_path
     else
@@ -18,9 +19,6 @@ class PostsController < ApplicationController
   end
 
   private
-
-  def require_login
-  end
 
   def post_params
     params.expect(post: [ :body ])
