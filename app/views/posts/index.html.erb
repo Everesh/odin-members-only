@@ -1,5 +1,12 @@
 <div class = 'board'>
     <% @posts.each do |post| %>
-        <div><%= post.body %></div>
+        <div>
+            <p>
+                <%= post.body %>
+            </p>
+            <% if user_signed_in? %>
+                <span>by: <%= post.author %></span>
+            <% end %>
+        </div>
     <% end %>
 </div>
