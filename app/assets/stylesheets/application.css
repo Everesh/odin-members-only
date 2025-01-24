@@ -8,3 +8,90 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ * {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+ }
+
+ body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #1b1a19;
+ }
+
+ nav, .board {
+    width: min(100%, 1028px);
+    background-color: #353535;
+    padding: 1em 2em;
+ }
+
+ nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    justify-content: flex-end;
+    align-items: center;
+ }
+
+ nav ul li:first-child {
+    margin-right: auto;
+ }
+
+a, h2 {
+    font-weight: bold;
+    color: #ad5f32;
+    text-decoration: none;
+ }
+
+ .board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1em;
+ }
+
+ .board > div, form {
+    background-color: rgb(221, 181, 133);
+    color: #353535;
+
+    min-width: 180px;
+    min-height: 180px;
+
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+ .board > div > span {
+    border-top: #353535 1px solid;
+    text-align: right;
+ }
+
+ .board > div a {
+    color: #353535;
+    border: none;
+
+    align-self: center;
+ }
+
+ .post > div:last-child {
+    display: none;
+ }
+
+ .board.post {
+    justify-content: center;
+ }
+
+ .board.post textarea {
+    width: 500px;
+    height: 250px;
+ }

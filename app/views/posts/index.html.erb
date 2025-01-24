@@ -1,4 +1,7 @@
 <div class = 'board'>
+    <% if user_signed_in? %>
+        <div><p></p><%= link_to 'New Post', new_post_path %><p></p></div>
+    <% end %>
     <% @posts.each do |post| %>
         <div>
             <p>
